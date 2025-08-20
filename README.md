@@ -1,3 +1,6 @@
+- ノート数: <!-- NOTES_COUNT -->0<!-- NOTES_COUNT -->
+- 最終更新: <!-- LAST_UPDATED -->N/A<!-- LAST_UPDATED -->
+
 # Learning Notes
 
 このリポジトリは、日々の学習記録をまとめた技術日誌です。  
