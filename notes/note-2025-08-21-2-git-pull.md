@@ -27,6 +27,26 @@ git push origin feature/add-slug-fix
 ~~~
 - その後GitHubのPull Request(PR)でレビューを経てmainにマージ
 
+### コンフリクト解消
+- pull/rebase 時に衝突がよく起きる
+- ファイルを開いて `<<<<<<<` `=======` `>>>>>>>`を直す
+- 保存
+~~~bash
+git add .
+git rebase --continue
+~~~
+- 実務では日常茶飯事
+
+### コミットメッセージ
+- 一目で何をしたか分かるように
+- 実務だと英語が多い(例：`Fix: bug in note slug function`)
+- 日本語でもいいけど、統一感持たせるのが大事
+　→ その現場ごとのルールなどがある場合、確認する
+
+### 一歩進む学習アイデア
+- 今の「学習ノート管理」をブランチ運用で進めてみる
+    - `feature/add-XXX`ブランチで作業
+    - GitHubでPR作って、自分でマージしてみる
 
 
 ## 疑問点・調べたいこと
