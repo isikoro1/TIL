@@ -10,17 +10,18 @@ $ErrorActionPreference = "Stop"
 $today = Get-Date -Format "yyyy-MM-dd"
 
 # タイトルから slug を作成（半角英数とハイフンのみ）
-function To-Slug([string]$s) {
-  $n = $s.ToLower()
-  $n = $n -replace '\s+', '-'           # 空白→-
-  $n = $n -replace '[^a-z0-9\-]', ''    # 許可以外を削除
-  $n = $n -replace '-{2,}', '-'         # -- を - に
-  $n = $n.Trim('-')                     # 先頭末尾の - 削除
-  if ([string]::IsNullOrWhiteSpace($n)) { $n = "note" }
-  return $n
+function Convert-Slug {
+    param([string]$s)
+    $n = $s.ToLower()
+    $n = $n -replace '\s+', '-'
+    $n = $n -replace '[^a-z0-9\-]', ''
+    $n = $n -replace '-{2,}', '-'
+    $n = $n.Trim('-')
+    if ([string]::IsNullOrWhiteSpace($n)) { $n = "note" }
+    return $n
 }
 
-$slug = To-Slug $Title
+$slug = Convert-Slug $Title
 
 # ファイルパス決定（同日複数OK）
 $dir = "notes"
