@@ -36,6 +36,15 @@ git push origin feature/update-new-note-script
 - PRをマージするとmain に統合
 - ローカルでも main を最新化しておく
 
+### Pull Request のイメージ
+- 申請者（開発者）が自分の `feature/xxx` ブランチで作業
+- GitHub上でPull Request(PR)を作成（=「レビューお願いします」のように申請）
+- レビュー担当や責任者がコードを確認
+    - 問題なければ「Approve（承認）」
+    - 修正が必要ならコメントを返す
+- 最後に責任者 or 開発リーダーが「Merge」して`main`に取り込む 
+
+
 ~~~
 git checkout main
 git pull origin main --rebase
