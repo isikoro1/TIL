@@ -1,0 +1,8 @@
+# ローカル設定や環境ファイル
+.env
+*.log
+
+# OSやエディタのゴミファイル
+.DS_Store
+Thumbs.db
+.vscode/
