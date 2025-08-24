@@ -1,5 +1,5 @@
-- ノート数: <!-- NOTES_COUNT -->4<!-- NOTES_COUNT -->
-- 最終更新: <!-- LAST_UPDATED -->2025-08-22<!-- LAST_UPDATED -->
+- ノート数: <!-- NOTES_COUNT -->5<!-- NOTES_COUNT -->
+- 最終更新: <!-- LAST_UPDATED -->2025-08-24<!-- LAST_UPDATED -->
 
 # Learning Notes
 
