@@ -1,43 +1,33 @@
-﻿# now-note.ps1
-Param(
+﻿Param(
   [Parameter(Mandatory = $true)]
   [string]$Title
 )
 
 $ErrorActionPreference = "Stop"
 
-# 今日の日付（YYYY-MM-DD）
+# 今日の日付
 $today = Get-Date -Format "yyyy-MM-dd"
+$year  = Get-Date -Format "yyyy"
+$month = Get-Date -Format "MM"
+$day   = Get-Date -Format "dd"
 
-# タイトルから slug を作成（半角英数とハイフンのみ）
-function Convert-Slug {
-    param([string]$s)
-    $n = $s.ToLower()
-    $n = $n -replace '\s+', '-'
-    $n = $n -replace '[^a-z0-9\-]', ''
-    $n = $n -replace '-{2,}', '-'
-    $n = $n.Trim('-')
-    if ([string]::IsNullOrWhiteSpace($n)) { $n = "note" }
-    return $n
-}
+# 年フォルダを作成
+$yearDir = $year
+if (-not (Test-Path $yearDir)) { New-Item -ItemType Directory -Path $yearDir | Out-Null }
 
-$slug = Convert-Slug $Title
-
-# ファイルパス決定（同日複数OK）
-$dir = "notes"
-if (-not (Test-Path $dir)) { New-Item -ItemType Directory -Path $dir | Out-Null }
-$filename = Join-Path $dir ("note-{0}-{1}.md" -f $today, $slug)
+# ファイル名: MM-DD_Title.md
+$filename = Join-Path $yearDir ("{0}-{1}_{2}.md" -f $month, $day, $Title)
 
 # 同名があれば連番付与
 $counter = 2
 while (Test-Path $filename) {
-  $filename = Join-Path $dir ("note-{0}-{1}-{2}.md" -f $today, $slug, $counter)
+  $filename = Join-Path $yearDir ("{0}-{1}_{2}-{3}.md" -f $month, $day, $Title, $counter)
   $counter++
 }
 
-# テンプレ本文（Markdownのコードブロックはチルダで閉じる）
+# 本文テンプレート
 $body = @"
-# 学習ノート $today — $Title
+# $Title — $today
 
 ## 今日学んだこと
 - 
@@ -54,7 +44,7 @@ $body = @"
 - 
 "@
 
-# 末尾改行ありで保存（UTF-8 with BOM）
+# UTF-8 (BOMなし) で保存
 $utf8NoBom = New-Object System.Text.UTF8Encoding($false)
 [System.IO.File]::WriteAllText($filename, $body, $utf8NoBom)
 
