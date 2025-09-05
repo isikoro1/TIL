@@ -31,14 +31,12 @@ String task = text.substring(4); // index=4以降を切り出す → "勉強"
 ~~~
 ⇒MiniToDo.javaでは「コマンドが`add`で始まってるか？」を判定するのに使っている。
 
-## `get(i)`
-- リストや配列から要素を取り出すメソッド
-~~~java
-List<String> tasks = new ArrayList<>();
-tasks.add("勉強");
-tasks.add("買い物");
+## `try { } catch(NumberFormatException e) { }`
+- `NumberFormatException` = 「数字に変換できないとき」に発生する例外
 
-System.out.println(tasks.get(0)); // "勉強"
-System.out.println(tasks.get(1)); // "買い物"
+~~~java
+int n = Integer.parseInt("123"); // OK → 123
+int m = Integer.parseInt("abc"); // エラー! → NumberFormatException
 ~~~
-⇒MiniToDo.javaでは`for (int i=0; i<tasks.size(); i++) {tasks.get(i)}`で順番に取り出している。
+⇒MiniToDo.javaでは`delete abc`みたいに数字じゃない入力をしてもプログラムが落ちないようにcatchで拾っている。
+- `e`は例外オブジェクトであり、中にエラーメッセージなどが入っている。
