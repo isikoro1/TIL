@@ -1,4 +1,4 @@
-package miniapps;
+package Scripts2025;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,7 +7,7 @@ import java.util.Scanner;
 // ChatGPT出力を写経 2025.9.4
 // 分からない部分の学習はnotes/2025/09-05_TIL_MiniToDo.mdに記述
 
-public class MiniToDo {
+class MiniToDo {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         List<String> tasks = new ArrayList<>();

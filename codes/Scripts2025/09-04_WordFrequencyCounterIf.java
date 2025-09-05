@@ -1,4 +1,4 @@
-package Scripts;
+package Scripts2025;
 
 import java.util.HashMap;
 import java.util.Map;
