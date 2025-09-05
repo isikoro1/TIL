@@ -30,7 +30,6 @@ while (Test-Path $filename) {
 
 # 本文テンプレート
 $body = @"
-package Scripts2025;
 
  
 "@
