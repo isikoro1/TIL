@@ -1,4 +1,4 @@
-package Scripts2025;
+
 import java.util.*;
 
 class UniqueWordCollectorSorted {

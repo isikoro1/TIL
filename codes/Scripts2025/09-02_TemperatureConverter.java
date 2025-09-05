@@ -1,4 +1,4 @@
-package Scripts2025;
+
 import java.util.Scanner;
 
 //摂氏と華氏の温度を変換できます。

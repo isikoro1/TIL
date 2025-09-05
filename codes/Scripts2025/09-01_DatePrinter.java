@@ -1,4 +1,3 @@
-package Scripts2025;
 import java.time.LocalDate;
 
 // 今日の日付を出力するプログラム

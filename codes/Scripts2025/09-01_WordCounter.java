@@ -1,4 +1,3 @@
-package Scripts2025;
 
 
 class WordCounter {

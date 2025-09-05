@@ -6,10 +6,12 @@ Param(
 $ErrorActionPreference = "Stop"
 
 # 今日の日付
-$today = Get-Date -Format "yyyy-MM-dd"
+# $today = Get-Date -Format "yyyy-MM-dd"
 # $year  = Get-Date -Format "yyyy"
 $month = Get-Date -Format "MM"
 $day   = Get-Date -Format "dd"
+
+
 
 # 年フォルダを TIL/codes/Scripts 配下に作成
 $baseDir = "codes/Scripts2025"
@@ -28,10 +30,8 @@ while (Test-Path $filename) {
 
 # 本文テンプレート
 $body = @"
-# $Title — $today
+package Scripts2025;
 
-## 今日学んだこと
-- 
  
 "@
 

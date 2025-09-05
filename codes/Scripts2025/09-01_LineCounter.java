@@ -1,5 +1,3 @@
-package Scripts2025;
-
 
 import java.nio.file.*;
 import java.io.IOException;
