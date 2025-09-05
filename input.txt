@@ -1,4 +1,0 @@
-Java is fun
-I love coding
-Spring Boot is powerful
-Java is used in finance
