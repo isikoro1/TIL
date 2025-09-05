@@ -7,7 +7,7 @@ $ErrorActionPreference = "Stop"
 
 # 今日の日付
 $today = Get-Date -Format "yyyy-MM-dd"
-$year  = Get-Date -Format "yyyy"
+# $year  = Get-Date -Format "yyyy"
 $month = Get-Date -Format "MM"
 $day   = Get-Date -Format "dd"
 
