@@ -64,6 +64,3 @@ public static void main(String[] args) { /* 処理 */ }
 ~~~java
 public static void main(String[] args) { /* 処理 */ }
 ~~~
-
-## 明日の目標
-- 
