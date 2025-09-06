@@ -6,3 +6,10 @@
 .DS_Store
 Thumbs.db
 .vscode/
+
+
+input.csv
+input2.csv
+input.txt
+input2.txt
+output.csv
