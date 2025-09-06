@@ -3,9 +3,9 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
 
-class CSVReader {
+class CSVReader2 {
     public static void main(String[] args) {
-        Path file = Path.of("imput.csv");
+        Path file = Path.of("input.csv");
 
         try {
             List<String> lines = Files.readAllLines(file);
