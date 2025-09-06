@@ -20,7 +20,8 @@
 
 PowerShellで入力し、ファイル作成する
 ~~~bash
-.\scripts\new-note.ps1 -Title "Test1" 
+.\command\new-code.ps1 -Title "Test"
+.\command\new-note.ps1 -Title "Test" 
 ~~~
 
 - コミット前のファイルの消し方
