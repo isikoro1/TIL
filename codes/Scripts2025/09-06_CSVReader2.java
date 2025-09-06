@@ -22,6 +22,9 @@ class CSVReader2 {
                 // 表形式で整形（幅指定）
                 for (String col : columns) {
                     System.out.printf("%-10s", col);
+                    // %s = 文字列を出力
+                    // 10 = 幅を10文字に固定
+                    // - = 左寄せ
                 }
                 System.out.println();
 
