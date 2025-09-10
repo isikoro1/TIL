@@ -31,7 +31,8 @@ class MiniToDo8 {
         while (true) {
             System.out.print("> ");
             String input = sc.nextLine().trim();
-            if (input.isEmpty()) continue;
+            if (input.isEmpty())
+                continue;
 
             String[] parts = input.split(" ", 2);
             String cmd = parts[0];
@@ -84,8 +85,8 @@ class MiniToDo8 {
         for (int i = 0; i < tasks.size(); i++) {
             Task task = tasks.get(i);
             if (mode.equals("all") ||
-                (mode.equals("done") && task.done) ||
-                (mode.equals("undone") && !task.done)) {
+                    (mode.equals("done") && task.done) ||
+                    (mode.equals("undone") && !task.done)) {
                 System.out.println("  " + (i + 1) + ": " + task);
             }
         }
@@ -122,11 +123,12 @@ class MiniToDo8 {
     private static void editTask(List<Task> tasks, String input) {
         try {
             String[] parts = input.split(" ", 3);
-            int index = Integer.parseInt(parts[1]) - 1;
             if (parts.length < 3) {
                 System.out.println("編集するタスク番号と新しい内容を指定してください。");
                 return;
             }
+
+            int index = Integer.parseInt(parts[1]) - 1;
             if (index < 0 || index >= tasks.size()) {
                 System.out.println("無効なタスク番号です。");
                 return;
@@ -160,7 +162,7 @@ class MiniToDo8 {
                     boolean done = parts[0].equals("1");
                     String title = parts.length > 1 ? parts[1] : "";
                     tasks.add(new Task(title, done));
-              }
+                }
             } catch (IOException e) {
                 System.out.println("タスクの読み込みに失敗しました。");
             }
