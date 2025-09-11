@@ -31,6 +31,7 @@ class MiniToDo9 {
             }
             return base;
         }
+
     }
 
     public static void main(String[] args) {
@@ -65,6 +66,8 @@ class MiniToDo9 {
                 default -> System.out.println("不明なコマンドです。helpコマンドで確認してください。");
             }
         }
+    
+
     }
 
     // ==== コマンド一覧 ====
@@ -213,7 +216,7 @@ class MiniToDo9 {
         }
         return tasks;
     }
-
+    
     private static void saveTasks(List<Task> tasks) {
         try (BufferedWriter writer = Files.newBufferedWriter(FILE, StandardCharsets.UTF_8)) {
             for (Task task : tasks) {
@@ -226,4 +229,6 @@ class MiniToDo9 {
         }
 
     }
+
+
 }

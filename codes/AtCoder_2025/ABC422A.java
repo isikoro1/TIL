@@ -22,6 +22,7 @@ class ABC422A {
                 System.out.println(n + "-" + m);
             }
         }
+        sc.close();
 
     }
 }
