@@ -4,7 +4,7 @@ import java.nio.charset.StandardCharsets;
 
 class WeatherApiSample {
     public static void main(String[] args) {
-        // APIキー（自分で登録して取得した物を入れる）
+        // APIキー（自分で登録して取得した物を入れる。平文保存はNG。環境変数や.envで.gitignore、暗号化などで保存）
         String apiKey = "YOUR_API_KEY";
         String city = "Tokyo"; // 東京の天気
         String urlStr = "http://api.openweathermap.org/data/2.5/weather?q="
