@@ -7,6 +7,9 @@
 Thumbs.db
 .vscode/
 
+# Java build files
+*.class
+
 
 input.csv
 input2.csv
