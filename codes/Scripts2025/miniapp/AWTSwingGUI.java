@@ -2,7 +2,7 @@ package miniapp;
 
 import javax.swing.*;
 
-public class AWT_Swing_GUI {
+public class AWTSwingGUI {
     public static void main(String[] args) {
         JFrame frame = new JFrame("Hello GUI");
         JLabel label = new JLabel("こんにちは GUI!", SwingConstants.CENTER);
