@@ -1,7 +1,5 @@
 import pyttsx3
 
-engine = pyttsx3.init()
-
 print("=== 音声読み上げプログラム ===")
 print("読み上げたいテキストを入力してください。終了するには 'exit' と入力します。")
 
@@ -13,6 +11,7 @@ with open("voice_log.txt", "a", encoding="utf-8") as f:
             break
         f.write(text + "\n")
 
+        # 毎回初期化することで必ず発声する
+        engine = pyttsx3.init()
         engine.say(text)
         engine.runAndWait()
-        engine.stop()  # 次の入力に備えてキューをクリア

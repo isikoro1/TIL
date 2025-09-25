@@ -1,3 +1,5 @@
+package September;
+
 class MultiplicationTable {
     public static void main (String[] args) {
         System.out.println("=== 九九表 ===");
