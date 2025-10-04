@@ -92,10 +92,18 @@ public class OopCalculator {
 
             Operation op;
             switch (choice) {
-                case 1: op = new Addition(a, b); break;
-                case 2: op = new Subtraction(a, b); break;
-                case 3: op = new Multiplication(a, b); break;
-                case 4: op = new Division(a, b) break;
+                case 1:
+                    op = new Addition(a, b);
+                    break;
+                case 2:
+                    op = new Subtraction(a, b);
+                    break;
+                case 3:
+                    op = new Multiplication(a, b);
+                    break;
+                case 4:
+                    op = new Division(a, b);
+                    break;
                 default:
                     System.out.println("無効な選択です。");
                     continue;
