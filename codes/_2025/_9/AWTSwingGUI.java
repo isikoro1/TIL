@@ -1,4 +1,3 @@
-package September;
 
 import javax.swing.*;
 

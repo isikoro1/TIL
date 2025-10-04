@@ -1,4 +1,3 @@
-package September;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
@@ -44,7 +43,8 @@ class MiniToDo9 {
         while (true) {
             System.out.print("> ");
             String input = sc.nextLine().trim();
-            if (input.isEmpty()) continue;
+            if (input.isEmpty())
+                continue;
 
             String[] parts = input.split(" ", 2);
             String cmd = parts[0];
@@ -66,7 +66,6 @@ class MiniToDo9 {
                 default -> System.out.println("不明なコマンドです。helpコマンドで確認してください。");
             }
         }
-    
 
     }
 
@@ -111,7 +110,7 @@ class MiniToDo9 {
     private static void listTasks(List<Task> tasks, String mode) {
         System.out.println("=== タスクリスト ===");
         LocalDate today = LocalDate.now();
-        
+
         for (int i = 0; i < tasks.size(); i++) {
             Task task = tasks.get(i);
 
@@ -119,12 +118,11 @@ class MiniToDo9 {
             boolean isUndone = !task.done;
             boolean isOverdue = task.dueDate != null && task.dueDate.isBefore(today) && !task.done;
 
-            boolean shouldDisplay = 
-                mode.equals("all") ||
-                (mode.equals("done") && isDone) ||
-                (mode.equals("undone") && isUndone) ||
-                (mode.equals("overdue") && isOverdue);
-            
+            boolean shouldDisplay = mode.equals("all") ||
+                    (mode.equals("done") && isDone) ||
+                    (mode.equals("undone") && isUndone) ||
+                    (mode.equals("overdue") && isOverdue);
+
             if (shouldDisplay) {
                 System.out.println("  " + (i + 1) + ": " + task);
             }
@@ -194,7 +192,8 @@ class MiniToDo9 {
 
     private static List<Task> loadTasks() {
         List<Task> tasks = new ArrayList<>();
-        if (!Files.exists(FILE)) return tasks;
+        if (!Files.exists(FILE))
+            return tasks;
         try (BufferedReader reader = Files.newBufferedReader(FILE, StandardCharsets.UTF_8)) {
             String line;
             while ((line = reader.readLine()) != null) {
@@ -204,19 +203,19 @@ class MiniToDo9 {
                 LocalDate dueDate = null;
                 if (parts.length > 2 && !parts[2].isBlank()) {
                     try {
-                            dueDate = LocalDate.parse(parts[2], DATE_FORMAT);
-                        } catch (DateTimeParseException e) {
-                            System.out.println("期限の読み込みに失敗: " + parts[2]);
-                        }
+                        dueDate = LocalDate.parse(parts[2], DATE_FORMAT);
+                    } catch (DateTimeParseException e) {
+                        System.out.println("期限の読み込みに失敗: " + parts[2]);
                     }
-                    tasks.add(new Task(title, done, dueDate));
                 }
+                tasks.add(new Task(title, done, dueDate));
+            }
         } catch (IOException e) {
             System.out.println("タスクの読み込みに失敗しました: ");
         }
         return tasks;
     }
-    
+
     private static void saveTasks(List<Task> tasks) {
         try (BufferedWriter writer = Files.newBufferedWriter(FILE, StandardCharsets.UTF_8)) {
             for (Task task : tasks) {
@@ -229,6 +228,5 @@ class MiniToDo9 {
         }
 
     }
-
 
 }
