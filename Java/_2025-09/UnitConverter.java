@@ -1,5 +1,3 @@
-package September;
-
 import java.util.Scanner;
 
 public class UnitConverter {
@@ -16,7 +14,6 @@ public class UnitConverter {
             System.out.println("番号を選んでください: ");
 
             int choice = sc.nextInt();
-
 
             if (choice == 0) {
                 System.out.println("終了します。");
@@ -43,7 +40,6 @@ public class UnitConverter {
                     System.out.println("無効な選択です");
             }
         }
-        
         System.out.println();
     }
 }
