@@ -1,4 +1,3 @@
-package codes._2025._10;
 
 import java.util.Scanner;
 
@@ -47,7 +46,7 @@ public class DailyCode_02 {
                     }
                     break;
                 default:
-                    System.out.println("無効な選択です。");            
+                    System.out.println("無効な選択です。");
             }
 
             System.out.println();
