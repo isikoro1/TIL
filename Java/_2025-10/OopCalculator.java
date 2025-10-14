@@ -1,4 +1,3 @@
-package codes._2025._10;
 
 import java.util.Scanner;
 
