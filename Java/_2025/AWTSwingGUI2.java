@@ -1,4 +1,4 @@
-
+package Java._2025;
 
 import javax.swing.*;
 
@@ -8,7 +8,7 @@ public class AWTSwingGUI2 {
         frame.setSize(300, 200);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        //ラベル作成（中央に表示）
+        // ラベル作成（中央に表示）
         JLabel label = new JLabel("こんにちは GUI!", SwingConstants.CENTER);
 
         // ボタン作成

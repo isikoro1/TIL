@@ -1,3 +1,5 @@
+package Java._2025;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -18,7 +20,7 @@ class CSVVertical {
                 System.out.printf("%-10s: ", headers[col]);
 
                 // 2行目以降のデータを縦に並べる
-                for (int row = 1; row < lines.size(); row++) {  // size()は要素数を返す
+                for (int row = 1; row < lines.size(); row++) { // size()は要素数を返す
                     String[] columns = lines.get(row).split(",");
                     if (col < columns.length) {
                         System.out.print(columns[col] + " ");

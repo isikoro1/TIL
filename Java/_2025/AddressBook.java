@@ -1,3 +1,4 @@
+package Java._2025;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -61,7 +62,7 @@ public class AddressBook {
                     break;
                 default:
                     System.out.println("無効な選択です");
-            
+
             }
             System.out.println();
 

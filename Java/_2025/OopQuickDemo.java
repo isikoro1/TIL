@@ -1,3 +1,5 @@
+package Java._2025;
+
 class Animal {
     String name;
 
@@ -25,7 +27,7 @@ class Dog extends Animal {
 
 class Cat extends Animal {
     Cat(String name) {
-        super(name); 
+        super(name);
     }
 
     @Override
@@ -37,9 +39,9 @@ class Cat extends Animal {
 public class OopQuickDemo {
     public static void main(String[] args) {
         Animal[] animals = {
-            new Dog("ポチ"),
-            new Cat("タマ"),
-            new Dog("シロ")
+                new Dog("ポチ"),
+                new Cat("タマ"),
+                new Dog("シロ")
         };
 
         for (Animal a : animals) {

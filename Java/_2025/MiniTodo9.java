@@ -1,3 +1,4 @@
+package Java._2025;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;

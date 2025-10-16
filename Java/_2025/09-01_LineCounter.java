@@ -1,3 +1,4 @@
+package Java._2025;
 
 import java.nio.file.*;
 import java.io.IOException;
@@ -19,6 +20,5 @@ class LineCounter {
             System.out.println("ファイルを読み込めませんでした: " + e.getMessage());
         }
 
-        
     }
 }
