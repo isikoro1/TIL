@@ -17,3 +17,7 @@ input.txt
 input2.txt
 output.csv
 tasks.txt
+
+
+node_modules/
+*.js
